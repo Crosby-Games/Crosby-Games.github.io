@@ -12,6 +12,10 @@
   .tag { color: #5b6b7a; margin: 0 0 32px; }
   h2 { font-size: 1.2rem; margin: 32px 0 8px; }
   a { color: #1f5fbf; }
+  .yt { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border: 1px solid #e3c5c3; border-radius: 8px; background: #fdf6f5; }
+  /* A plain red play badge drawn in CSS, not YouTube's own logo file. */
+  .yt-mark { flex: 0 0 auto; width: 34px; height: 24px; margin-top: 2px; border-radius: 6px; background: #ff0000; position: relative; }
+  .yt-mark::after { content: ""; position: absolute; left: 13px; top: 6px; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent #fff; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #d3dde5; color: #5b6b7a; font-size: 0.9rem; }
 </style>
 </head>
@@ -27,13 +31,16 @@
   <p>Channel Autopilot is a private tool run by the channel's owner on their own computer. The tool uses the YouTube Data API to upload the channel's videos, set their thumbnails and update their titles and descriptions, and the YouTube Analytics API to read the channel's own viewing statistics. It acts only on this one channel, and the owner is its only user.</p>
   <p>Videos use AI-generated narration and, sometimes, AI illustrations. They are labelled as altered or synthetic content where YouTube's rules require it.</p>
 
-  <h2>Privacy</h2>
-  <p>Read the <a href="privacy.html">privacy policy</a> for what the app accesses, stores and never shares.</p>
+  <h2>YouTube API Services</h2>
+  <p class="yt"><span class="yt-mark" aria-hidden="true"></span><span>Channel Autopilot uses <strong>YouTube API Services</strong>. By using it you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>; see also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</span></p>
+
+  <h2>Privacy and terms</h2>
+  <p>Read the <a href="privacy.html"><strong>Privacy Policy</strong></a> for what the app accesses, stores and never shares, and the <a href="terms.html"><strong>Terms of Service</strong></a> for how it may be used.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:elliottcrosby2009@gmail.com">elliottcrosby2009@gmail.com</a></p>
 
-  <footer>Channel Autopilot · Elliott Crosby</footer>
+  <footer>Channel Autopilot · Elliott Crosby · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
 </main>
 </body>
 </html>
